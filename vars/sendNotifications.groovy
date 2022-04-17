@@ -32,6 +32,6 @@ def call(String buildStatus = 'STARTED') {
   //     recipientProviders: [[$class: 'DevelopersRecipientProvider']]
   //   )
   mail to: 'tatsuya1412kusama@gmail.com',
-            subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
-            body: "Something is wrong with ${env.BUILD_URL}"
+            subject: "Finish Pipeline: ${currentBuild.fullDisplayName}",
+            body: "Get Pipeline information with ${env.BUILD_URL} and ${corror}"
 }
