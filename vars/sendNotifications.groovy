@@ -25,10 +25,13 @@ def call(String buildStatus = 'STARTED') {
   }
 
   // Send notifications
-  emailext (
-      to: 'tatsuya1412kusama@gmail.com',
-      subject: subject,
-      body: details,
-      recipientProviders: [[$class: 'DevelopersRecipientProvider']]
-    )
+  // emailext (
+  //     to: 'tatsuya1412kusama@gmail.com',
+  //     subject: subject,
+  //     body: details,
+  //     recipientProviders: [[$class: 'DevelopersRecipientProvider']]
+  //   )
+  mail to: 'tatsuya1412kusama@gmail.com',
+            subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
+            body: "Something is wrong with ${env.BUILD_URL}"
 }
