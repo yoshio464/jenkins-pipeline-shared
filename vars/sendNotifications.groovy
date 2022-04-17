@@ -33,5 +33,5 @@ def call(String buildStatus = 'STARTED') {
   //   )
   mail to: 'tatsuya1412kusama@gmail.com',
             subject: "Finish Pipeline: ${currentBuild.fullDisplayName}",
-            body: "Get Pipeline information with ${env.BUILD_URL} and ${corror}"
+            body: "Get Pipeline information with ${env.BUILD_URL} and ${color}"
 }
